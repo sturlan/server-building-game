@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Help Build Our Server!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="error-code">404</h1>
+            <h2 class="error-message">Page Not Found</h2>
+            <p class="subtitle">But don't worry! You can help us build our server instead!</p>
+        </header>
+
+        <main class="game-container">
+            <div class="server-display">
+                <div class="server-icon" id="serverIcon">
+                    <div class="server-base"></div>
+                    <div class="server-tower"></div>
+                    <div class="server-lights"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="click-section">
+                <button class="click-button" id="clickButton">
+                    <span class="click-text">Click to Build!</span>
+                </button>
+                <div class="click-feedback" id="clickFeedback"></div>
+            </div>
+
+            <div class="stats-section">
+                <div class="total-clicks">
+                    <span class="label">Total Clicks:</span>
+                    <span class="count" id="totalClicks">0</span>
+                </div>
+                <div class="milestone" id="milestone">
+                    <span class="milestone-text">Keep clicking to reach the first milestone!</span>
+                </div>
+            </div>
+
+            <div class="motivation-section">
+                <p class="motivation-text" id="motivationText">
+                    Every click helps us build a better server!
+                </p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Thanks for helping! Your clicks make a difference!</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 60%, #90EE90 60%, #90EE90 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1f2937;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #E6E6E6;
+}
+
+/* Header styles */
+.header {
+    margin-bottom: 2rem;
+}
+
+.error-code {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #A71D22;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #A71D22;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #A71D22;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Game container */
+.game-container {
+    margin: 2rem 0;
+}
+
+/* Server display */
+.server-display {
+    margin-bottom: 2rem;
+}
+
+.server-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    transition: transform 0.3s ease;
+}
+
+.server-icon:hover {
+    transform: scale(1.05);
+}
+
+.server-base {
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(145deg, #A71D22, #c53030);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.server-tower {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #A71D22, #c53030);
+    border-radius: 8px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.server-lights {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 8px;
+    background: #E6E6E6;
+    border-radius: 4px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #A71D22, #c53030);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 4px;
+}
+
+/* Click section */
+.click-section {
+    margin: 2rem 0;
+}
+
+.click-button {
+    background: linear-gradient(145deg, #A71D22, #c53030);
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(167, 29, 34, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.click-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(167, 29, 34, 0.4);
+}
+
+.click-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(167, 29, 34, 0.3);
+}
+
+.click-button.clicked {
+    animation: clickPulse 0.3s ease;
+}
+
+@keyframes clickPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.click-feedback {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #A71D22;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.click-feedback.show {
+    opacity: 1;
+}
+
+/* Stats section */
+.stats-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #E6E6E6;
+    border-radius: 10px;
+}
+
+.total-clicks {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.label {
+    color: #A71D22;
+    margin-right: 0.5rem;
+}
+
+.count {
+    color: #A71D22;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.milestone {
+    margin-top: 1rem;
+}
+
+.milestone-text {
+    color: #A71D22;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Motivation section */
+.motivation-section {
+    margin: 1.5rem 0;
+}
+
+.motivation-text {
+    font-size: 1.1rem;
+    color: #A71D22;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #E6E6E6;
+    color: #A71D22;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .error-code {
+        font-size: 3rem;
+    }
+    
+    .error-message {
+        font-size: 1.2rem;
+    }
+    
+    .click-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+    
+    .server-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .server-base {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .server-tower {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Animation for server building progress */
+.server-icon.building {
+    animation: buildPulse 0.5s ease;
+}
+
+@keyframes buildPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1) rotate(2deg); }
+    100% { transform: scale(1); }
+}
+
+/* Milestone celebration */
+.milestone.celebrate {
+    animation: celebrate 1s ease;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    50% { transform: scale(1.1); }
+    75% { transform: scale(1.05); }
+}
